@@ -37,9 +37,7 @@ export default function Form({ messagesCollection }) {
         onChange={handleChange}
         placeholder="Type your message here..."
       />
-      <>
-      <Button variant="danger"onClick={() =>{!newMessage}}>Send</Button>{''}
-      </>
+      <button disabled={!newMessage}>Send</button>
     </form>
   );
 }
