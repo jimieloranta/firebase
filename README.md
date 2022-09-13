@@ -1,6 +1,6 @@
 # Firebase Example
 
-https://jimieloranta.github.io/firebase/
+https://jimieloranta.github.io/firebase-example/
 
 ### Development
 
