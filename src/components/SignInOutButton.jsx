@@ -8,11 +8,11 @@ export default function SignInOutButton() {
 
   return signInCheckResult.signedIn ? (
     <>
-    <Button variant="danger" onClick={() => signOut(auth)}>Sign out</Button>{' '}
+    <Button variant="outline-danger" onClick={() => signOut(auth)}>Sign out</Button>{' '}
     </>
   ) : (
     <>
-    <Button variant="danger" onClick={() => SignInWithGoogle (auth)}>Sign in with Google</Button>{' '}
+    <Button variant="outline-danger" onClick={() => SignInWithGoogle (auth)}>Sign in with Google</Button>{' '}
     </>
   );
 }
