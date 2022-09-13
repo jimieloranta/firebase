@@ -38,7 +38,7 @@ export default function Form({ messagesCollection }) {
         placeholder="Type your message here..."
       />
       <>
-      <Button variant="danger"disabled={!newMessage}>Send</Button>
+      <Button variant="danger"onClick={() =>{!newMessage}}>Send</Button>{''}
       </>
     </form>
   );
