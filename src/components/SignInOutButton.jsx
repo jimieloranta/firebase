@@ -12,7 +12,7 @@ export default function SignInOutButton() {
     </>
   ) : (
     <>
-    <Button variant="outline-danger" onClick={() => SignInWithGoogle (auth)}>Sign in with Google</Button>{' '}
+    <Button variant="outline-danger" onClick={() => signInWithGoogle (auth)}>Sign in with Google</Button>{' '}
     </>
   );
 }
