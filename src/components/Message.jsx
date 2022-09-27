@@ -1,5 +1,7 @@
 import { deleteDoc, doc } from "firebase/firestore";
 import { useFirestore, useUser } from "reactfire";
+import Button from 'react-bootstrap/Button';
+import MessageChange from "./MessageChange";
 
 const dateTimeFormat = new Intl.DateTimeFormat("en-GB", {
   hour: "numeric",
@@ -26,13 +28,16 @@ export default function Message({ createdAt, text, displayName, id, uid }) {
       </strong>{" "}
       {text}
       {uid === user.uid ? (
-        <button
-          onClick={async () => {
+        <>
+        <Button
+          variant="outline=warning" onClick={async () => {
             await deleteDoc(doc(firestore, "messages", id));
           }}
         >
           Poista
-        </button>
+        </Button>{' '}
+        <MessageChange id={id} text={text}/>
+        </>
       ) : null}
     </div>
   );
