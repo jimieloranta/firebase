@@ -38,7 +38,7 @@ export default function Form({ messagesCollection }) {
         onChange={handleChange}
         placeholder="Type your message here..."
       />
-      <Button variant="outline-danger" disabled={!newMessage}>Send</Button>
+      <Button variant="outline-danger" type="submit" disabled={!newMessage}>Send</Button>
     </form>
   );
 }
