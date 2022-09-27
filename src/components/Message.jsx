@@ -1,4 +1,3 @@
-import { deleteDoc, doc } from "firebase/firestore";
 import { useFirestore, useUser } from "reactfire";
 import Button from 'react-bootstrap/Button';
 import MessageChange from "./MessageChange";
@@ -29,13 +28,6 @@ export default function Message({ createdAt, text, displayName, id, uid }) {
       {text}
       {uid === user.uid ? (
         <>
-        <Button
-          variant="outline=warning" onClick={async () => {
-            await deleteDoc(doc(firestore, "messages", id));
-          }}
-        >
-          Poista
-        </Button>{' '}
         <MessageChange id={id} text={text}/>
         </>
       ) : null}
